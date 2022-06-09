@@ -3,18 +3,25 @@
 let firstOperand = 82;
 let secondOperand = 84;
 let operator = "+";
-let displayValue = "";
+let displayValue = "55";
 let calcDisplay = document.getElementById("output");
 let grandTotal = "";
 
 const clearButton = document.getElementById("btnClear");
 const numberButtons = document.querySelectorAll("[btnNumber]");
 
-clearButton.addEventListener("click", clear);
-
+//STUCK ON MAKING NUMBERS APPEND AND DISPLAY TO OUTPUT
 numberButtons.forEach((button) =>
-  button.addEventListener("click", () => appendNumber(button.textContent))
+  button.addEventListener("click", appendNumber(button.textContent))
 );
+
+function appendNumber(number) {
+  displayValue += number;
+  console.log(displayValue);
+  return displayValue;
+}
+
+clearButton.addEventListener("click", clear);
 
 //Calculator Operations
 const addTotal = (firstOperand, secondOperand) => {
