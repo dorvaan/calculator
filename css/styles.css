@@ -65,13 +65,13 @@ div {
   padding: 8px;
 }
 
-.btnClear {
+#btnClear {
   margin: 5px;
   height: 70px;
   width: 170px;
 }
 
-.btnBackSpace {
+#btnBackSpace {
   margin: 5px;
   height: 70px;
   width: 170px;
