@@ -1,20 +1,66 @@
 body {
-    background-color: lightgray;
-    text-align: center;
+  background-color: lightblue;
+  text-align: center;
 }
 
 div {
-    text-align: center;
-    border: 1px solid;
+  text-align: center;
+  /* border: 1px solid; */
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    color: aquamarine;
+  display: flex;
+  justify-content: center;
+  color: aquamarine;
 }
 
-.title {
-    flex: auto;
-    color: blue;
+.output {
+  color: black;
+  background-color: lightgray;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 120;
+  width: 400;
+  margin: 15px;
+  padding: 5px;
+  text-align: right;
+}
+
+.button {
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.buttonSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 15px 5px 15px;
+  max-width: 390px;
+  padding: 8px;
+}
+
+.clear {
+  margin: 5px;
+  height: 70px;
+  width: 170px;
+}
+
+.backSpace {
+  margin: 5px;
+  height: 70px;
+  width: 170px;
+}
+
+.data {
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+}
+
+.calcSection {
+  max-width: 400px;
+  color: red;
+  background-color: grey;
 }
