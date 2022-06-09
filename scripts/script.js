@@ -53,6 +53,9 @@ function operate(operator) {
 //Clear Screen
 function clear() {
   calcDisplay.innerHTML = 0;
+  firstOperand = "";
+  secondOperand = "";
+  operator = "";
 }
 
 //Clear Screen on Load
