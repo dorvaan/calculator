@@ -1,6 +1,14 @@
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background-color: lightblue;
   text-align: center;
+  /* footer support */
+  margin-bottom: 100px;
 }
 
 div {
@@ -26,7 +34,7 @@ div {
   text-align: right;
 }
 
-.button {
+.btn {
   border-radius: 5px;
   font-size: 1.5rem;
 }
@@ -61,4 +69,29 @@ div {
 .calcSection {
   max-width: 400px;
   background-color: grey;
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.fa-github {
+  color: var(--font);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }

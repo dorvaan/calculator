@@ -2,6 +2,7 @@
 
 let firstOperand = 82;
 let secondOperand = 4;
+let operator = "+";
 let calcDisplay = document.getElementById("output");
 
 //Calculator Operations
@@ -26,3 +27,18 @@ const divTotal = (firstOperand, secondOperand) => {
 };
 
 calcDisplay.innerHTML = addTotal(firstOperand, secondOperand);
+
+function operate(operator) {
+  if (operator == "+") {
+    addTotal(firstOperand, secondOperand);
+  } else if (operator === "-") {
+    subTotal(firstOperand, secondOperand);
+  } else if (operator === "*") {
+    multTotal(firstOperand, secondOperand);
+  } else if (operator === "/") {
+    divTotal(firstOperand, secondOperand);
+  }
+}
+
+operate("+");
+console.log(addTotal);
