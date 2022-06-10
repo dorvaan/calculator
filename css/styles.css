@@ -65,6 +65,11 @@ div {
   padding: 8px;
 }
 
+.btn {
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+}
 #btnClear {
   margin: 5px;
   height: 70px;
@@ -75,18 +80,6 @@ div {
   margin: 5px;
   height: 70px;
   width: 170px;
-}
-
-.btnNumber {
-  width: 75px;
-  height: 75px;
-  margin: 5px;
-}
-
-.btnOperator {
-  width: 75px;
-  height: 75px;
-  margin: 5px;
 }
 
 .calcSection {
