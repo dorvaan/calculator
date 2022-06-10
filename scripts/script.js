@@ -14,7 +14,7 @@ const operatorButtons = document.querySelectorAll(".btnOperator");
 const equalsButton = document.getElementById("btnEqual");
 const decimalButton = document.getElementById("btnDecimal");
 
-//CREATE EVENTS FOR NUMBER BUTTONS
+//CREATE CLICK EVENTS FOR NUMBER BUTTONS
 numberButtons.forEach((button) =>
   button.addEventListener("click", () => {
     appendNumber(button.textContent);
@@ -83,10 +83,10 @@ function appendOperator(calcOperator) {
 }
 
 function operate(operator) {
-  if (operator == "+") {
+  if (operator === "+") {
     calcDisplay.innerHTML = addTotal(
-      number(firstOperand),
-      number(secondOperand)
+      Number(firstOperand),
+      Number(secondOperand)
     );
   } else if (operator === "-") {
     calcDisplay.innerHTML = subTotal(firstOperand, secondOperand);
