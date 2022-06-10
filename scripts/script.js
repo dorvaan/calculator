@@ -12,18 +12,26 @@ const backSpaceButton = document.getElementById("btnBackSpace");
 const numberButtons = document.querySelectorAll(".btnNumber");
 const operatorButtons = document.querySelectorAll(".btnOperator");
 const equalsButton = document.getElementById("btnEqual");
+const decimalButton = document.getElementById("btnDecimal");
 
+//CREATE EVENTS FOR NUMBER BUTTONS
 numberButtons.forEach((button) =>
   button.addEventListener("click", () => {
     appendNumber(button.textContent);
   })
 );
 
+//CREATE EVENTS FOR OPERATOR BUTTONS
 operatorButtons.forEach((button) =>
   button.addEventListener("click", () => {
     appendOperator(button.textContent);
   })
 );
+
+//DECIMAL BUTTON
+decimalButton.addEventListener("click", () => {
+  decimal(decimalButton.textContent);
+});
 
 //EQUALS BUTTON
 equalsButton.addEventListener("click", () => {
@@ -38,16 +46,29 @@ equalsButton.addEventListener("click", () => {
   console.log();
 });
 
+//CLEAR BUTTON
+clearButton.addEventListener("click", clear);
+
+//BACKSPACE BUTTON
 backSpaceButton.addEventListener("click", () => {
   displayValue = displayValue.slice(0, -1);
   calcDisplay.innerHTML = displayValue;
 });
 
+//FUNCTIONS
 function appendNumber(number) {
   displayValue += number;
   console.log(displayValue);
   calcDisplay.innerHTML = displayValue;
   return displayValue;
+}
+
+function decimal(decimal) {
+  if (displayValue.includes(decimal)) {
+  } else {
+    displayValue += ".";
+    calcDisplay.innerHTML = displayValue;
+  }
 }
 
 function appendOperator(calcOperator) {
@@ -61,9 +82,6 @@ function appendOperator(calcOperator) {
   console.log(`DisplayValue: ${displayValue}`);
 }
 
-clearButton.addEventListener("click", clear);
-
-//Function to call the Calculator operations
 function operate(operator) {
   if (operator == "+") {
     calcDisplay.innerHTML = addTotal(
