@@ -8,8 +8,10 @@ let calcDisplay = document.getElementById("output");
 let grandTotal = "";
 
 const clearButton = document.getElementById("btnClear");
+const backSpaceButton = document.getElementById("btnBackSpace");
 const numberButtons = document.querySelectorAll(".btnNumber");
 const operatorButtons = document.querySelectorAll(".btnOperator");
+const equalsButton = document.getElementById("btnEqual");
 
 numberButtons.forEach((button) =>
   button.addEventListener("click", () => {
@@ -23,14 +25,22 @@ operatorButtons.forEach((button) =>
   })
 );
 
-document.getElementById("btnEqual").addEventListener("click", () => {
+//EQUALS BUTTON
+equalsButton.addEventListener("click", () => {
   secondOperand = displayValue;
   console.log(`First Operand ${firstOperand}`);
   console.log(`Second Operand ${secondOperand}`);
   console.log(`Operator ${operator}`);
   displayValue = "";
   operate(operator);
+  secondOperand = "";
+  firstOperand = "";
   console.log();
+});
+
+backSpaceButton.addEventListener("click", () => {
+  displayValue = displayValue.slice(0, -1);
+  calcDisplay.innerHTML = displayValue;
 });
 
 function appendNumber(number) {
@@ -98,8 +108,3 @@ function clear() {
   operator = "";
   displayValue = "";
 }
-
-//Clear Screen on Load
-//clear();
-
-//operate("*");
